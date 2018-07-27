@@ -6,7 +6,7 @@ LOCAL_SRC_FILES:=       \
         AudioTrackDemoNative.cpp
 
 LOCAL_SHARED_LIBRARIES := \
-        libaudioclient libutils libbinder
+        libaudioclient libutils libbinder liblog
 
 LOCAL_C_INCLUDES:= \
 	system/core/base/include
