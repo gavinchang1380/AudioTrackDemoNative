@@ -3,6 +3,12 @@
 #include <math.h>
 #include <binder/IPCThreadState.h>
 
+void callback(int event, void* user, void *info)
+{
+    (void)user; (void)info;
+    printf("callback: event = %d\n", event);
+}
+
 int main()
 {
     int16_t buffer[960 * 2];
@@ -13,7 +19,7 @@ int main()
                                        AUDIO_CHANNEL_OUT_STEREO,
                                        960,
                                        AUDIO_OUTPUT_FLAG_FAST,
-                                       NULL,
+                                       callback,
                                        NULL,
                                        0,
                                        NULL,
