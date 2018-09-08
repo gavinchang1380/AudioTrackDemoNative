@@ -6,10 +6,11 @@ LOCAL_SRC_FILES:=       \
         AudioTrackDemoNative.cpp
 
 LOCAL_SHARED_LIBRARIES := \
-        libaudioclient libutils libbinder liblog
+        libaudioclient libutils libbinder liblog libaudioutils
 
 LOCAL_C_INCLUDES:= \
-	system/core/base/include
+	system/core/base/include \
+	system/media/audio_utils/include
 
 LOCAL_CFLAGS += -Wno-multichar -Werror -Wall
 
